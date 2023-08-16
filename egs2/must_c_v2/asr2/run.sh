@@ -31,13 +31,13 @@ tgt_case="ts"
     --use_lm false \
     --local_data_opts "${tgt_lang}" \
     --audio_format "flac.ark" \
-    --nj 10 \
+    --nj 1 \
     --inference_nj 40 \
     --audio_format "flac.ark" \
-    --kmeans_opts "--batch_bins 4800000" \
+    --kmeans_opts "--batch_bins 24000 --stage 3 --nj 1" \
     --kmeans_feature "${kmeans_feature}" \
     --nclusters "${nclusters}" \
-    --ngpu 1 \
+    --ngpu 2 \
     --src_lang ${src_lang} \
     --tgt_lang ${tgt_lang} \
     --src_token_type "bpe" \
